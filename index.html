@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7f1">
+  <meta name="description" content="Baca post dan thread X sebagai Markdown dengan x.md Reader. Tempel tautan atau kirim langsung dari menu Bagikan iPhone.">
+  <title>x.md Reader — Baca X tanpa berantakan</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f7f1;--paper:#fff;--paper-soft:#f8faf6;--ink:#15251e;--muted:#68776e;--line:#dfe7de;--green:#24744d;--green-dark:#155239;--green-soft:#eaf4e9;--orange:#9a5a1a;--red:#a53e34;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 95% 0%,#e1efd9 0,transparent 31%),var(--bg);color:var(--ink);font-family:var(--sans)}a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:28px 28px 54px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:72px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:17px;font-weight:800;letter-spacing:-.045em}.brandmark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:var(--green-dark);color:#fff;font-size:20px}.brandlabel small{display:block;margin-top:1px;color:var(--muted);font-size:11px;font-weight:600;letter-spacing:.03em}.topnote{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;background:#ffffffb8;padding:9px 13px;color:var(--muted);font-size:12px}.live-dot{width:7px;height:7px;background:#64a35c;border-radius:50%}.hero{max-width:760px;margin:0 auto 34px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow-mark{display:grid;place-items:center;width:22px;height:22px;border-radius:8px;background:var(--green-soft);font-size:12px;letter-spacing:0}h1{max-width:760px;margin:18px auto 15px;font-size:clamp(38px,6.5vw,66px);line-height:1.02;letter-spacing:-.07em}h1 span{color:var(--green)}.hero p{max-width:590px;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.7}.shell{max-width:800px;margin:0 auto}.card{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 18px 50px #234b2510}.form{padding:24px 25px 22px}.labelrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.labelrow label{font-size:12px;font-weight:800;letter-spacing:.06em}.hint{color:var(--muted);font-size:11px}.inputrow{display:flex;gap:10px}.urlinput{flex:1;min-width:0;height:52px;border:1px solid #d5dfd4;border-radius:12px;background:#fbfdf9;padding:0 15px;color:var(--ink);font:13px var(--mono);outline:none;transition:border .18s,box-shadow .18s}.urlinput:focus,select:focus,input[type=number]:focus{border-color:#65a378;box-shadow:0 0 0 3px #65a37825}.urlinput::placeholder{color:#93a098}.primary{min-width:150px;border:0;border-radius:12px;background:var(--green-dark);color:#fff;padding:0 19px;font:750 13px var(--sans);cursor:pointer;transition:transform .15s,background .15s}.primary:hover{background:#206746;transform:translateY(-1px)}.primary:disabled{opacity:.65;cursor:wait;transform:none}.formtools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px}.sample{border:0;background:none;padding:5px 0;color:var(--green);font:700 12px var(--sans);cursor:pointer}.sample:hover{text-decoration:underline}.privacy{color:#829087;font-size:11px}details.advanced{border-top:1px solid #edf1ec;margin-top:18px;padding-top:15px}.advanced summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;color:#3a5144;font-size:12px;font-weight:750}.advanced summary::-webkit-details-marker{display:none}.advanced summary::after{content:"＋";color:var(--green);font-size:17px;font-weight:500}.advanced[open] summary::after{content:"−"}.advanced-summary-note{color:var(--muted);font-size:11px;font-weight:500}.options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 12px;margin-top:17px;padding:17px;border:1px solid #e8eee6;border-radius:14px;background:var(--paper-soft)}.field{display:flex;flex-direction:column;gap:7px;min-width:0}.field label{color:#66766c;font-size:10px;font-weight:800;letter-spacing:.07em}select,input[type=number]{width:100%;height:40px;border:1px solid #dce5dc;border-radius:9px;background:#fff;padding:0 10px;color:#26382d;font:12px var(--sans);outline:none}.toggleline{grid-column:1/-1;display:flex;align-items:center;gap:9px;color:#637267;font-size:12px}.toggleline input{width:15px;height:15px;margin:0;accent-color:var(--green)}.status{display:none;margin-top:15px;border-radius:11px;padding:11px 13px;font-size:12px;line-height:1.5}.status.show{display:block}.status.error{border:1px solid #edd5d0;background:#fff3f0;color:var(--red)}.status.loading,.status.ok{border:1px solid #d4e7d3;background:#f0f8ed;color:#315c39}.spin{display:inline-block;width:13px;height:13px;margin-right:7px;border:2px solid #c9ddc8;border-top-color:var(--green-dark);border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px}@keyframes spin{to{transform:rotate(360deg)}}.result{display:none;margin-top:22px}.result.show{display:block}.resulttop{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:11px}.resulttitle{font-size:12px;font-weight:850;letter-spacing:.05em}.resultmeta{max-width:520px;overflow:hidden;margin-top:5px;color:var(--muted);font:10px var(--mono);text-overflow:ellipsis;white-space:nowrap}.resultbuttons{display:flex;gap:8px;flex-shrink:0}.smallbtn{border:1px solid #dbe4da;border-radius:9px;background:#fff;padding:9px 12px;color:#34473a;font:700 11px var(--sans);cursor:pointer}.smallbtn:hover{border-color:#79a985;color:var(--green-dark)}.output{max-height:560px;overflow:auto;border:1px solid #dfe7de;border-radius:12px;background:#f8faf7;padding:17px;color:#26372d;font:12px/1.75 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}.guide{margin:34px auto 0;padding:26px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,#fff 0%,#f8fbf5 100%);box-shadow:0 12px 38px #234b2509}.guidehead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}.guide-kicker{color:var(--green);font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.guide h2{margin:7px 0 7px;font-size:clamp(21px,3vw,27px);letter-spacing:-.045em}.guideintro{max-width:590px;margin:0;color:var(--muted);font-size:13px;line-height:1.65}.manual-badge{flex-shrink:0;border:1px solid #e4e9df;border-radius:99px;background:#fff;padding:8px 10px;color:#67766c;font-size:10px;font-weight:750}.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.step{display:flex;gap:12px;min-height:95px;border:1px solid #e8eee6;border-radius:13px;background:#fff;padding:14px}.stepnum{flex:0 0 25px;height:25px;display:grid;place-items:center;border-radius:9px;background:var(--green-soft);color:var(--green-dark);font-size:11px;font-weight:850}.step h3{margin:1px 0 5px;font-size:12px}.step p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}.step code,.pattern code{font:10px var(--mono);overflow-wrap:anywhere}.pattern{margin-top:14px;border:1px solid #e1e9df;border-radius:12px;background:#f7faf5;padding:13px 15px;color:#415447;font-size:11px;line-height:1.65}.pattern strong{display:block;margin-bottom:4px;color:#304638;font-size:11px}.no-install{display:flex;gap:10px;margin-top:13px;border:1px solid #eee4d4;border-radius:12px;background:#fffbf3;padding:12px 14px;color:#6e593b;font-size:11px;line-height:1.6}.no-install-mark{flex-shrink:0;color:var(--orange);font-weight:900}.footer{display:flex;justify-content:space-between;gap:16px;margin:24px auto 0;color:#7d8a80;font-size:11px;line-height:1.6}.footer a{color:#436d51;text-decoration:none}.footer a:hover{text-decoration:underline}.api-tag{flex-shrink:0;align-self:flex-start;border:1px solid #d9e5d7;border-radius:7px;background:#f8fbf6;padding:5px 8px;color:var(--green);font:10px var(--mono)}
+    @media(max-width:680px){.wrap{padding:18px 15px 36px}.top{margin-bottom:49px}.topnote{padding:8px 10px;font-size:10px}.brand{font-size:16px}.brandmark{width:35px;height:35px}.hero{margin-bottom:25px}.hero p{font-size:14px;line-height:1.65}h1{font-size:clamp(38px,11vw,54px)}.form{padding:18px 16px}.labelrow{align-items:flex-start;flex-direction:column;gap:5px}.inputrow{flex-direction:column}.urlinput{height:49px;font-size:12px}.primary{height:47px}.formtools{align-items:flex-start;flex-direction:column;gap:6px}.options{grid-template-columns:repeat(2,minmax(0,1fr));padding:13px;gap:12px 10px}.guide{margin-top:25px;padding:19px 16px}.guidehead{flex-direction:column;gap:11px}.steps{grid-template-columns:1fr}.step{min-height:0}.manual-badge{order:-1}.resulttop{align-items:flex-start;flex-direction:column}.resultbuttons{width:100%}.smallbtn{flex:1}.resultmeta{max-width:calc(100vw - 42px)}.output{max-height:480px;font-size:11px}.footer{flex-direction:column;gap:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+    /* Responsive polish: larger touch targets, clearer hierarchy, and mobile-safe spacing. */
+    :root{--green:#1f7048;--green-dark:#174f37;--green-soft:#e9f3e8;--line:#dce6dc;--bg:#f5f7f2}
+    html{min-width:320px;scroll-padding-top:18px;-webkit-text-size-adjust:100%}
+    body{background:radial-gradient(ellipse at 92% 0%,#deedd7 0,transparent 34%),linear-gradient(180deg,#f8faf6 0%,var(--bg) 64%)}
+    button,select,input{font:inherit}
+    button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:3px solid #6aab7a;outline-offset:3px}
+    .wrap{width:min(100%,1160px);padding:clamp(18px,4vw,38px) clamp(16px,4vw,36px) max(54px,env(safe-area-inset-bottom))}
+    .top{margin-bottom:clamp(42px,8vw,82px)}
+    .brand{gap:12px}.brandmark{box-shadow:0 5px 12px #174f3725}
+    .topnote{max-width:100%;line-height:1.35;background:#ffffffc9;backdrop-filter:blur(8px)}
+    .hero{margin-bottom:clamp(24px,4vw,38px)}
+    .eyebrow{font-size:11px;letter-spacing:.13em}
+    h1{font-size:clamp(2.65rem,7vw,5rem);line-height:1.02;letter-spacing:-.065em}
+    .hero p{font-size:clamp(14px,1.7vw,16px);line-height:1.72}
+    .shell{width:100%}
+    .card{border-radius:24px;box-shadow:0 20px 58px #183b2112}
+    .form{padding:clamp(18px,3.2vw,28px)}
+    .labelrow label{font-size:12px}
+    .hint{font-size:12px}
+    .inputrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+    .urlinput{height:56px;border-radius:13px;font-size:13px;padding-inline:16px}
+    .primary{min-width:158px;min-height:54px;border-radius:13px;font-size:14px;box-shadow:0 5px 14px #174f3720}
+    .primary:active,.smallbtn:active{transform:translateY(1px)}
+    .formtools{margin-top:14px}
+    .sample{min-height:40px;padding:7px 0;font-size:13px}
+    .privacy{font-size:12px;line-height:1.5}
+    details.advanced{margin-top:16px;padding-top:16px}
+    .advanced summary{min-height:42px;font-size:13px}
+    .options{gap:14px;padding:18px}
+    .field{gap:8px}.field label{font-size:11px}
+    select,input[type=number]{height:46px;border-radius:10px;padding-inline:12px;font-size:13px}
+    .toggleline{min-height:40px;font-size:13px}.toggleline input{width:18px;height:18px}
+    .status{border-radius:12px;padding:13px 14px;font-size:13px}
+    .result{margin-top:24px}
+    .resulttop{margin-bottom:13px}
+    .resulttitle{font-size:13px}.resultmeta{font-size:11px;line-height:1.5}
+    .smallbtn{min-height:42px;padding:10px 15px;font-size:12px}
+    .output{max-height:min(64svh,680px);border-radius:14px;padding:clamp(15px,2.5vw,21px);font-size:13px;line-height:1.8;overscroll-behavior:contain}
+    .guide{margin-top:clamp(24px,4vw,36px);border-radius:22px;padding:clamp(18px,3.2vw,29px);box-shadow:0 14px 40px #234b2508}
+    .guidehead{margin-bottom:22px}.guide h2{line-height:1.18}.guideintro{font-size:14px;line-height:1.7}
+    .manual-badge{line-height:1.25}
+    .steps{gap:12px}.step{min-height:104px;gap:13px;padding:16px;border-radius:15px}
+    .stepnum{flex-basis:29px;height:29px;font-size:12px}
+    .step h3{font-size:13px}.step p{font-size:12px;line-height:1.65}
+    .pattern,.no-install{font-size:12px;line-height:1.7}.pattern code,.step code{font-size:11px}
+    .footer{font-size:12px;line-height:1.7}.api-tag{font-size:11px}
+    @media(max-width:760px){
+      .wrap{padding-top:max(16px,env(safe-area-inset-top));padding-inline:clamp(15px,4.5vw,26px);padding-bottom:max(38px,env(safe-area-inset-bottom))}
+      .top{margin-bottom:clamp(40px,10vw,60px)}
+      .topnote{gap:7px;padding:8px 10px;font-size:11px}
+      .brand{gap:9px}.brandmark{width:36px;height:36px;border-radius:12px}
+      .hero{margin-bottom:24px}.hero p{max-width:500px}
+      h1{font-size:clamp(2.55rem,11vw,4.1rem)}
+      .inputrow{grid-template-columns:minmax(0,1fr)}
+      .primary{width:100%;min-height:50px}
+      .formtools{align-items:flex-start;flex-direction:column;gap:5px}
+      .options{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 11px;padding:14px}
+      .guidehead{flex-direction:column;gap:12px}
+      .manual-badge{order:-1}
+      .steps{grid-template-columns:1fr}
+      .step{min-height:0}
+      .resulttop{align-items:flex-start;flex-direction:column;gap:10px}
+      .resultbuttons{width:100%}.smallbtn{flex:1}
+      .resultmeta{max-width:calc(100vw - 52px);white-space:normal;overflow-wrap:anywhere}
+      .output{max-height:55svh;font-size:12px}
+      .footer{flex-direction:column;gap:8px}
+    }
+    @media(max-width:390px){
+      .wrap{padding-inline:14px}
+      .top{align-items:flex-start;gap:8px;margin-bottom:38px}
+      .topnote{max-width:168px;font-size:10px}
+      .brand{font-size:15px}.brandmark{width:34px;height:34px}
+      h1{font-size:clamp(2.35rem,11.8vw,3.1rem)}
+      .form{padding:17px 14px}
+      .options{gap:11px 9px;padding:12px}
+      .guide{padding:18px 14px}
+    }
+    @media(prefers-reduced-motion:reduce){.primary:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top"><a class="brand" href="#top" aria-label="x.md Reader beranda"><span class="brandmark" aria-hidden="true">x</span><span class="brandlabel">x.md<small>READER</small></span></a><span class="topnote"><span class="live-dot" aria-hidden="true"></span> Baca lebih rapi · simpan lebih mudah</span></header>
+    <section class="hero" id="top"><div class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">↘</span> X POSTS → MARKDOWN</div><h1>Obrolan panjang,<br><span>tanpa berantakan.</span></h1><p>Tempel tautan post publik X untuk membaca thread dan konteks percakapan sebagai Markdown. Salin hasilnya atau simpan sebagai file.</p></section>
+    <section class="shell" aria-label="Pembaca post X">
+      <div class="card"><form class="form" id="form">
+        <div class="labelrow"><label for="postUrl">TAUTAN POST X</label><span class="hint">Mendukung x.com dan twitter.com</span></div>
+        <div class="inputrow"><input class="urlinput" id="postUrl" type="url" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://x.com/username/status/123456789" required aria-describedby="urlHint"><button class="primary" id="submit" type="submit">Baca post <span aria-hidden="true">↗</span></button></div>
+        <div class="formtools"><button class="sample" id="sample" type="button">Isi contoh dokumentasi ↗</button><span class="privacy" id="urlHint">Post harus bersifat publik. Koneksi ke API x.md.</span></div>
+        <details class="advanced"><summary><span>Pengaturan lanjutan <span class="advanced-summary-note">· opsional</span></span></summary><div class="options" aria-label="Opsi pembacaan">
+          <div class="field"><label for="thread">CAKUPAN THREAD</label><select id="thread"><option value="full" selected>Lengkap (default)</option><option value="off">Hanya post ini</option><option value="conversation">Percakapan</option><option value="custom">Pilih jumlah…</option></select></div>
+          <div class="field"><label for="context">KONTEKS</label><select id="context"><option value="full" selected>Sekitar post</option><option value="thread">Thread penulis</option></select></div>
+          <div class="field"><label for="replies">BALASAN</label><select id="replies"><option value="top" selected>Teratas</option><option value="recent">Terbaru</option><option value="off">Tanpa balasan</option></select></div>
+          <div class="field"><label for="format">FORMAT KELUARAN</label><select id="format"><option value="markdown" selected>Markdown</option><option value="json">JSON</option><option value="obsidian">Obsidian</option></select></div>
+          <div class="field" id="countField" hidden><label for="threadCount">JUMLAH POST (2–100)</label><input id="threadCount" type="number" min="2" max="100" value="20"></div>
+          <div class="field"><label for="userinfo">INFO PENULIS</label><select id="userinfo"><option value="off" selected>Minimal</option><option value="author">Penulis</option><option value="all">Semua</option></select></div>
+          <label class="toggleline"><input id="full" type="checkbox"><span>Tambahkan tanggal dan statistik</span></label>
+        </div></details>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+      </form></div>
+      <section class="result" id="result" aria-label="Hasil pembacaan"><div class="resulttop"><div><div class="resulttitle">HASIL PEMBACAAN</div><div class="resultmeta" id="resultMeta"></div></div><div class="resultbuttons"><button class="smallbtn" id="copy" type="button">Salin</button><button class="smallbtn" id="download" type="button">Unduh file</button></div></div><pre class="output" id="output"></pre></section>
+      <section class="guide" id="iphone-shortcut" aria-labelledby="guideTitle">
+        <div class="guidehead"><div><div class="guide-kicker">Untuk iPhone · Share Sheet</div><h2 id="guideTitle">Buka post langsung dari menu Bagikan</h2><p class="guideintro">Buat Shortcut sekali di aplikasi Apple Shortcuts. Setelah itu, pilih “Baca di x.md” dari menu Bagikan sebuah post dan halaman ini akan mengisinya lalu mulai membaca otomatis.</p></div><span class="manual-badge">PANDUAN MANUAL</span></div>
+        <div class="steps">
+          <article class="step"><span class="stepnum">1</span><div><h3>Buat Shortcut baru</h3><p>Di aplikasi <strong>Shortcuts</strong>, buat pintasan dan beri nama, misalnya <strong>Baca di x.md</strong>.</p></div></article>
+          <article class="step"><span class="stepnum">2</span><div><h3>Aktifkan Share Sheet</h3><p>Buka detail pintasan, aktifkan <strong>Show in Share Sheet</strong>, lalu izinkan masukan berupa URL dan halaman web Safari.</p></div></article>
+          <article class="step"><span class="stepnum">3</span><div><h3>Susun alamat reader</h3><p>Tambahkan tindakan <strong>URL</strong>. Gunakan alamat situs ini, lalu tambahkan parameter <code>?url=</code> dan variabel URL dari <strong>Shortcut Input</strong>.</p></div></article>
+          <article class="step"><span class="stepnum">4</span><div><h3>Buka halaman</h3><p>Tambahkan tindakan <strong>Open URLs</strong> setelahnya. Simpan, lalu uji dengan tombol Bagikan pada post publik di X.</p></div></article>
+        </div>
+        <div class="pattern"><strong>Bentuk alamat yang dipakai</strong><code id="urlPattern"></code><br>Ganti <code>[URL dari Share Sheet]</code> dengan variabel input pintasan. Jika perlu, encode nilai URL sebelum memasukkannya ke parameter.</div>
+        <div class="no-install"><span class="no-install-mark" aria-hidden="true">i</span><span><strong>Belum ada instalasi satu ketuk.</strong> Tombol pasang otomatis memerlukan tautan iCloud resmi yang dibuat setelah Shortcut diekspor dari aplikasi Apple Shortcuts milik pemiliknya. Halaman ini tidak memakai tombol palsu yang hanya membuka petunjuk.</span></div>
+      </section>
+      <footer class="footer"><span>Data post diambil langsung dari API <a href="https://mdfromx.com/docs/posts" target="_blank" rel="noreferrer">x.md</a>. Hanya tautan post publik yang dapat dibaca.</span><span class="api-tag">API v1</span></footer>
+    </section>
+  </main>
+<script>
+(()=>{
+  const $=id=>document.getElementById(id);
+  const form=$('form'),urlInput=$('postUrl'),submit=$('submit'),status=$('status'),result=$('result'),output=$('output'),meta=$('resultMeta');
+  let currentText='',currentType='md';
+  $('urlPattern').textContent=`${location.origin}/?url=[URL dari Share Sheet]`;
+  function showStatus(message,type,loading=false){status.textContent='';status.className='status show '+type;if(loading){const spinner=document.createElement('span');spinner.className='spin';spinner.setAttribute('aria-hidden','true');status.append(spinner)}status.append(document.createTextNode(message));}
+  function hideStatus(){status.className='status';status.textContent='';}
+  $('thread').addEventListener('change',()=>{$('countField').hidden=$('thread').value!=='custom';});
+  $('sample').addEventListener('click',()=>{urlInput.value='https://x.com/trq212/status/2052809885763747935';urlInput.focus();});
+  function normalizePostUrl(value){let u;try{u=new URL(value.trim())}catch{throw new Error('Tautan tidak valid. Tempel URL post X yang lengkap.')}if(!['x.com','www.x.com','twitter.com','www.twitter.com'].includes(u.hostname.toLowerCase()))throw new Error('Gunakan tautan post dari x.com atau twitter.com.');const match=u.pathname.match(/^\/@?([\w]{1,15})\/status\/(\d+)/i);if(!match)throw new Error('URL belum berisi jalur post yang benar. Contoh: x.com/nama/status/123…');return `https://x.com/${match[1]}/status/${match[2]}`;}
+  form.addEventListener('submit',async ev=>{ev.preventDefault();hideStatus();result.classList.remove('show');submit.disabled=true;submit.innerHTML='<span class="spin" aria-hidden="true"></span>Mengambil…';try{const postUrl=normalizePostUrl(urlInput.value),params=new URLSearchParams({url:postUrl,thread:$('thread').value==='custom'?$('threadCount').value:$('thread').value,context:$('context').value,replies:$('replies').value,userinfo:$('userinfo').value,full:String($('full').checked),format:$('format').value});const apiUrl='https://mdfromx.com/api/v1/posts?'+params.toString();showStatus('Menghubungkan ke API x.md…','loading',true);const response=await fetch(apiUrl,{headers:{'Accept':'application/json'}});const raw=await response.text();if(!response.ok)throw new Error(`API mengembalikan status ${response.status}. ${raw.slice(0,220)}`);let data;try{data=JSON.parse(raw)}catch{data=raw;}const selectedFormat=$('format').value;if(selectedFormat==='json'){currentText=typeof data==='string'?data:JSON.stringify(data,null,2);currentType='json'}else if(selectedFormat==='markdown'&&data&&typeof data==='object'&&typeof data.markdown==='string'){currentText=data.markdown;currentType='md'}else if(selectedFormat==='obsidian'&&typeof data==='string'){currentText=data;currentType='md'}else if(typeof data==='string'){currentText=data;currentType=selectedFormat==='json'?'json':'md'}else{currentText=typeof data.markdown==='string'?data.markdown:JSON.stringify(data,null,2);currentType=selectedFormat==='json'?'json':'md'}output.textContent=currentText;meta.textContent=postUrl+' · '+selectedFormat.toUpperCase();result.classList.add('show');showStatus('Selesai — hasil berhasil diambil dari API.','ok')}catch(err){showStatus(err.message||'Terjadi kesalahan saat membaca post. Coba lagi sebentar.','error')}finally{submit.disabled=false;submit.textContent='Baca post ↗'}});
+  $('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(currentText);$('copy').textContent='Tersalin ✓';setTimeout(()=>$('copy').textContent='Salin',1400)}catch{$('copy').textContent='Gagal menyalin';setTimeout(()=>$('copy').textContent='Salin',1400)}});
+  $('download').addEventListener('click',()=>{const blob=new Blob([currentText],{type:currentType==='json'?'application/json;charset=utf-8':'text/markdown;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=currentType==='json'?'post-x.json':'post-x.md';a.click();URL.revokeObjectURL(a.href)});
+  const sharedPost=new URLSearchParams(location.search).get('url');if(sharedPost){urlInput.value=sharedPost;setTimeout(()=>form.requestSubmit(),250)}
+})();
+</script>
+</body>
+</html>
